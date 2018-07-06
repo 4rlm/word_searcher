@@ -26,7 +26,7 @@ end
 
 def run_word_searcher
   binding.pry
-  searched = WordSearcher::Searcher.new
+  searched = WordSearcher::Solver.new
   res = searched.start
   binding.pry
 
