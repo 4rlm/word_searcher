@@ -1,9 +1,7 @@
-RSpec.describe WordSearcher do
-  it "has a version number" do
-    expect(WordSearcher::VERSION).not_to be nil
-  end
+require 'anagram_algo'
+require 'spec_helper'
+# require 'crm_formatter'
 
-  it "does something useful" do
-    expect(false).to eq(true)
-  end
+RSpec.describe WordSearcher do
+  # let(:obj) { AnagramAlgo }
 end
