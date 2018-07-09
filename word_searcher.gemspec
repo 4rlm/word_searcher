@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["4rlm@protonmail.ch"]
 
   spec.summary       = %q{WordSearcher generates a new word search puzzle with your input word, then tries to solve the puzzle}
-  spec.description   = %q{WordSearcher generates a new word search puzzle with your input word, then tries to solve the puzzle.  It is not programmed to win every game.  It simply compares each letter of the word with all those available on the board, then randomly selects one.  Then, if looks to see if the next letter of the word is joining the prior, and so forth.  It plays more like a human, rather than a computer, so make the game more fun.  Each time you play, notice that the board changes each time, even for the same input word.}
+  spec.description   = %q{WordSearcher generates a new word search puzzle with your input word, then tries to solve the puzzle.  It is not programmed to win every game.  It simply compares each letter of the word with all those available on the board, then randomly selects one.  Then, it looks to see if the next letter of the word is joining the prior, and so forth.  It plays more like a human, rather than a computer, so make the game more fun.  Each time you play, notice that the board changes each time, even for the same input word.}
 
   spec.homepage      = 'https://github.com/4rlm/word_searcher'
   spec.license       = "MIT"
