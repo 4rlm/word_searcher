@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Adam Booth"]
   spec.email         = ["4rlm@protonmail.ch"]
 
-  spec.summary       = %q{Creates and solves word search game}
-  spec.description   = %q{Creates and solves word search game.}
+  spec.summary       = %q{WordSearcher generates a new word search puzzle with your input word, then tries to solve the puzzle}
+  spec.description   = %q{WordSearcher generates a new word search puzzle with your input word, then tries to solve the puzzle.  It is not programmed to win every game.  It simply compares each letter of the word with all those available on the board, then randomly selects one.  Then, if looks to see if the next letter of the word is joining the prior, and so forth.  It plays more like a human, rather than a computer, so make the game more fun.  Each time you play, notice that the board changes each time, even for the same input word.}
 
   spec.homepage      = 'https://github.com/4rlm/word_searcher'
   spec.license       = "MIT"
@@ -32,11 +32,11 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = '~> 2.5.1'
   spec.add_dependency 'activesupport', '~> 5.2'
-  spec.add_dependency 'crm_formatter', '~> 2.64'
+  spec.add_dependency 'crm_formatter', '~> 2.65'
   spec.add_dependency 'mechanizer', '~> 1.12'
   spec.add_dependency 'scrub_db', '~> 2.23'
   spec.add_dependency 'url_verifier', '~> 2.12'
-  spec.add_dependency 'utf8_sanitizer', '~> 2.16'
+  # spec.add_dependency 'utf8_sanitizer', '~> 2.16'
 
   # spec.add_dependency "activesupport-inflector", ['~> 0.1.0']
   spec.add_development_dependency 'bundler', '~> 1.16', '>= 1.16.2'

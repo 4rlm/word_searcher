@@ -4,8 +4,7 @@
 [![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 #### Creates and solves word search game.
-
-Note: Currently being moved from local environment to this gem.  Will be completed by 7/10/18
+WordSearcher generates a new word search puzzle with your input word, then tries to solve the puzzle.  It is not programmed to win every game.  It simply compares each letter of the word with all those available on the board, then randomly selects one.  Then, if looks to see if the next letter of the word is joining the prior, and so forth.  It plays more like a human, rather than a computer, so make the game more fun.  Each time you play, notice that the board changes each time, even for the same input word.
 
 ## Installation
 
@@ -25,7 +24,34 @@ Or install it yourself as:
 
 ## Usage
 
-Note: Currently being moved from local environment to this gem.  Will be completed by 7/10/18
+1) Add your word to a hash with `:word` symbol key, then pass the arguments to `WordSearcher.search(args)` like the example below.  If you don't pass any args, and just run `WordSearcher.search` it will return sample data for testing.
+
+```
+result = WordSearcher.search(word: 'austin')
+```
+
+2) The returned data will be in hash format like below:
+
+```
+{
+  :word=>"austin",
+  :found=>["a", "u", "s", "t", "i", "n"],
+  :remaining=>[],
+  :win=>true,
+  :puzzle=>
+    [
+      ["l", "a", "w", "r", "h", "z", "b"],
+      ["i", "p", "m", "b", "c", "j", "l"],
+      ["k", "j", "h", "c", "t", "a", "y"],
+      ["a", "u", "s", "t", "i", "n", "t"],
+      ["d", "s", "o", "v", "f", "x", "h"],
+      ["z", "d", "u", "a", "e", "k", "n"],
+      ["q", "y", "l", "c", "s", "d", "u"],
+      ["k", "z", "r", "m", "x", "g", "d"]
+    ]
+ }
+```
+
 
 ## Development
 

@@ -1,10 +1,15 @@
 require "word_searcher/version"
 
-require "word_searcher/searcher"
+require "word_searcher/solver"
 # require 'mechanizer'
 # require 'scrub_db'
 require 'pry'
 
 module WordSearcher
-  # Your code goes here...
+
+  def self.search(args={})
+    results = self::Solver.new.search(args)
+  end
+
+
 end
