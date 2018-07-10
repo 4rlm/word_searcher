@@ -1,6 +1,7 @@
 
 module WordSearcher
   class Solver
+    attr_accessor :puzzle, :coords, :word_chars, :word
 
     def initialize
       @word = []
@@ -47,6 +48,7 @@ module WordSearcher
         coord_hsh = { row: row, col: col, ri: ri, ci: ci }
         @coords << coord_hsh
       end
+      @coords
     end
 
     def iterate_coords
@@ -59,6 +61,7 @@ module WordSearcher
           end
         end
       end
+      @found
     end
 
     def get_neighbors(coord)
@@ -79,32 +82,6 @@ module WordSearcher
         row_range.include?(new_index) ? new_index : index
       end
     end
-
-    # def self.make_puzzle
-    #   binding.pry
-    #   puzzles = []
-    #
-    #   puzzles << { word: 'wolves',
-    #          puzzle: [["a", "w", "o", "l", "v", "e", "s"],
-    #                   ["s", "o", "a", "w", "a", "h", "p"],
-    #                   ["i", "t", "c", "k", "e", "t", "n"],
-    #                   ["o", "t", "s", "d", "h", "o", "h"],
-    #                   ["s", "e", "h", "g", "s", "t", "a"],
-    #                   ["u", "r", "p", "i", "w", "e", "u"],
-    #                   ["z", "s", "b", "n", "u", "i", "r"]] }
-    #
-    #   puzzles << { word: 'wolves',
-    #          puzzle: [["a", "w", "o", "l", "v", "e", "s"],
-    #                   ["s", "o", "a", "w", "a", "h", "p"],
-    #                   ["i", "t", "c", "k", "e", "t", "n"],
-    #                   ["o", "t", "s", "d", "h", "o", "h"],
-    #                   ["s", "e", "h", "g", "s", "t", "a"],
-    #                   ["u", "r", "p", "i", "w", "e", "u"],
-    #                   ["z", "s", "b", "n", "u", "i", "r"]] }
-    #
-    #   puzzle = puzzles.sample
-    # end
-
 
     def generate_puzzle
       word = @word
@@ -129,6 +106,30 @@ module WordSearcher
     end
 
 
+    ### Older Deprecated Method.  Keep for Reference. ###
+    # def self.make_puzzle
+    #   puzzles = []
+    #
+    #   puzzles << { word: 'wolves',
+    #          puzzle: [["a", "w", "o", "l", "v", "e", "s"],
+    #                   ["s", "o", "a", "w", "a", "h", "p"],
+    #                   ["i", "t", "c", "k", "e", "t", "n"],
+    #                   ["o", "t", "s", "d", "h", "o", "h"],
+    #                   ["s", "e", "h", "g", "s", "t", "a"],
+    #                   ["u", "r", "p", "i", "w", "e", "u"],
+    #                   ["z", "s", "b", "n", "u", "i", "r"]] }
+    #
+    #   puzzles << { word: 'wolves',
+    #          puzzle: [["a", "w", "o", "l", "v", "e", "s"],
+    #                   ["s", "o", "a", "w", "a", "h", "p"],
+    #                   ["i", "t", "c", "k", "e", "t", "n"],
+    #                   ["o", "t", "s", "d", "h", "o", "h"],
+    #                   ["s", "e", "h", "g", "s", "t", "a"],
+    #                   ["u", "r", "p", "i", "w", "e", "u"],
+    #                   ["z", "s", "b", "n", "u", "i", "r"]] }
+    #
+    #   puzzle = puzzles.sample
+    # end
 
 
   end

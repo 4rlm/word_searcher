@@ -1,4 +1,4 @@
-require 'anagram_algo'
+require 'word_searcher'
 require 'spec_helper'
 # require 'crm_formatter'
 
