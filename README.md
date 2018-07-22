@@ -1,5 +1,6 @@
 # WordSearcher
 
+[![Build Status](https://travis-ci.org/4rlm/word_searcher.svg?branch=master)](https://travis-ci.org/4rlm/word_searcher)
 [![Gem Version](https://badge.fury.io/rb/word_searcher.svg)](https://badge.fury.io/rb/word_searcher)
 [![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
